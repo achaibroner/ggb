@@ -1,0 +1,2 @@
+module GoodbadsHelper
+end

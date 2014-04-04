@@ -1,0 +1,21 @@
+<%= form_for(@goodbad) do |f| %>
+  <% if @goodbad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@goodbad.errors.count, "error") %> prohibited this goodbad from being saved:</h2>
+
+      <ul>
+      <% @goodbad.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :goodbad %><br>
+    <%= f.text_field :goodbad %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

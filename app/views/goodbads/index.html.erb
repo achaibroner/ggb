@@ -1,0 +1,29 @@
+<h1>Listing goodbads</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Goodbad</th>
+      <th>Time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @goodbads.each do |goodbad| %>
+      <tr>
+        <td><%= goodbad.goodbad %></td>
+        <td><%= goodbad.created_at.strftime("%d %b %y") %></td>
+        <td><%= link_to 'Show', goodbad %></td>
+        <td><%= link_to 'Edit', edit_goodbad_path(goodbad) %></td>
+        <td><%= link_to 'Destroy', goodbad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Goodbad', new_goodbad_path %>

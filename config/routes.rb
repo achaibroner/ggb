@@ -1,4 +1,7 @@
 Ggb::Application.routes.draw do
+  resources :goodbads
+
+  devise_for :users
   root "pages#home"
   get "about" => "pages#about"
   
