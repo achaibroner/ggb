@@ -18,23 +18,23 @@ class GoodbadsController < ApplicationController
   def create
     @goodbad = Goodbad.new(goodbad_params)
     if @goodbad.save
-      format.html { redirect_to @goodbad, notice: 'Goodbad was successfully created.' }
+      redirect_to @goodbad, notice: 'Goodbad was successfully created.'
     else
-      format.html { render action: 'new' }
+      render action: 'new'
     end
   end
 
   def update
     if @goodbad.update(goodbad_params)
-      format.html { redirect_to @goodbad, notice: 'Goodbad was successfully updated.' }
+      redirect_to @goodbad, notice: 'Goodbad was successfully updated.'
     else
-      format.html { render action: 'edit' }
+      render action: 'edit'
     end
   end
 
   def destroy
     @goodbad.destroy
-      format.html { redirect_to goodbads_url }
+      redirect_to goodbads_url
   end
 
   private
