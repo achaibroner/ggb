@@ -47,4 +47,5 @@ class GoodbadsController < ApplicationController
     def goodbad_params
       params.require(:goodbad).permit(:goodbad)
     end
+    
 end
